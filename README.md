@@ -5,7 +5,7 @@ Insightful analytics based on Spotify Music data
 ![GitHub contributors](https://img.shields.io/github/contributors/lordcrawford/musicanalytica)
 ![GitHub last commit](https://img.shields.io/github/last-commit/lordcrawford/musicanalytica)
 
-### Description
+## Description
 
 Tool written in Python that takes user music listening data and presents it with compelling visuals.
 
