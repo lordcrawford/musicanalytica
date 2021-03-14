@@ -7,6 +7,6 @@ Insightful analytics based on Spotify Music data
 
 ## Description
 
-Tool written in Python that takes user music listening data and presents it with compelling visuals.
+Tool written in Python that takes user music listening data and presents it with more intuitive data & recommendations.
 
-Uses information from Spotify and other music platform's APIs to create tables and graphs to easily comprehend data that would otherwise not be accessible. Includes a visualizer that has different settings and could be played in conjuction to the users favorite songs and artists that can be easily shareable to the user's social media in the form of a short video.
+Uses information from Spotify and other music platform's APIs to create tables and graphs to easily comprehend data that would otherwise not be accessible. Manipulates user's playlists, listening queues, and presents useful findings about their listening history. 
