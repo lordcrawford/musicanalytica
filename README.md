@@ -12,3 +12,12 @@ Project Link: https://github.com/lordcrawford/musicanalytica
 Tool written in Python that takes user music listening data and presents it with more intuitive data & recommendations.
 
 Uses information from Spotify and other music platform's APIs to create tables and graphs to easily comprehend data that would otherwise not be accessible. Manipulates user's playlists, listening queues, and presents useful findings about their listening history. 
+
+
+## Instructions
+
+Must install spotipy
+
+```bash
+pip install spotipy
+```
