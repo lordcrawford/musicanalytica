@@ -4,8 +4,8 @@ import random
 
 # CREATES A MORE INTUITIVE QUEUE ON EXECUTION FOR USER
 
-client_id = "e1ba4e85b2e94c6c8760c829ceed860d"
-client_secret = "d159a2d809d54bd18a7caad30775d190"
+client_id = ""
+client_secret = ""
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
@@ -26,11 +26,10 @@ medium_term = sp.current_user_top_tracks(limit=5, time_range='medium_term')
 long_term = sp.current_user_top_tracks(limit=10, time_range='long_term')
 
 queue_songs = []
-for idx, item in enumerate(short_term['items']):
-    if item['uri'] not in queue_songs:
-        track = item['name']
-        queue_songs.append(item['uri'])
-        print(idx, track)
+for song in short_term['items']:
+    if song['uri'] not in queue_songs:
+        track = song['name']
+        queue_songs.append(song['uri'])
 
 for song in medium_term['items']:
     if song['uri'] not in queue_songs:
@@ -39,7 +38,7 @@ for song in medium_term['items']:
 
 max_old_count = 0
 for song in long_term['items']:
-    if song['uri'] not in queue_songs and max_old_count != 5:
+    if song['uri'] not in queue_songs and max_old_count < 5:
         track = song['name']
         queue_songs.append(song['uri'])
         max_old_count += 1
