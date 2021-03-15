@@ -1,6 +1,8 @@
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth,SpotifyClientCredentials
-from flask import Flask, url_for, session, request, redirect
+from spotipy.oauth2 import SpotifyOAuth
+from flask import Flask, url_for, redirect
+
+#BOILERPLATE
 
 app = Flask(__name__)
 
@@ -23,4 +25,4 @@ def create_spotify_oauth():
             client_id=client_id,
             client_secret=client_secret,
             redirect_uri=url_for('authorize', _external=True),
-            scope="user-library-read")
+            scope="")
