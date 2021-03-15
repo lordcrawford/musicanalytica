@@ -9,9 +9,13 @@ Project Link: https://github.com/lordcrawford/musicanalytica
 
 ## Description
 
-Tool written in Python that takes user music listening data and presents it with more intuitive data & recommendations.
+Music Analytica serves as a tool that retrieves a Spotify user’s music listening history and encapsulates a suite of functionality for representing various recommendations, insights, and manipulation of the Spotify user experience based on that data. It combines specific user data, Spotify Artists information, and recommendation models to manipulate user's playlists, listening queues, and present useful findings of their listening history. Music Analytica makes use of the expansive, robust Spotify API and is programmed entirely in Python. 
 
-Uses information from Spotify and other music platform's APIs to create tables and graphs to easily comprehend data that would otherwise not be accessible. Manipulates user's playlists, listening queues, and presents useful findings about their listening history. 
+## Artist Recommendations
+
+This is an example of the Artist Recommendation feature for Music Analytica. Using the Spotify API, a list is generated of 5 artists that are recommended to the user given their music listening habits. 
+
+![Screen Shot 2021-03-14 at 11 40 46 PM](https://user-images.githubusercontent.com/71079996/111101467-5a939080-8520-11eb-8bca-ba866332255f.jpg)
 
 
 ## Instructions
