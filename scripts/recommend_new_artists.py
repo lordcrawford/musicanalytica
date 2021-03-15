@@ -2,11 +2,12 @@ import sys
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 import random
+import os
 
-# CREATES A MORE INTUITIVE QUEUE ON EXECUTION FOR USER
+# RECOMMENDS TRULY NEW ARTISTS BASED ON PAST LISTENING HISTORY
 
-client_id = ""
-client_secret = ""
+client_id = os.environ.get('MA_CLIENT_ID')
+client_secret = os.environ.get('MA_CLIENT_SECRET')
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,

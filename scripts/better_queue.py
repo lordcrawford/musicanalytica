@@ -1,11 +1,12 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import random
+import os
 
 # CREATES A MORE INTUITIVE QUEUE ON EXECUTION FOR USER
 
-client_id = ""
-client_secret = ""
+client_id = os.environ.get('MA_CLIENT_ID')
+client_secret = os.environ.get('MA_CLIENT_SECRET')
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
                                                client_secret=client_secret,
@@ -24,6 +25,7 @@ sp3 = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
 short_term = sp.current_user_top_tracks(limit=15, time_range='short_term')
 medium_term = sp.current_user_top_tracks(limit=5, time_range='medium_term')
 long_term = sp.current_user_top_tracks(limit=10, time_range='long_term')
+
 
 queue_songs = []
 for song in short_term['items']:
@@ -51,6 +53,7 @@ for rec in recs['tracks']:
         queue_songs.append(rec['uri'])
         print(track)
 
-#creates new queue
-random.shuffle(queue_songs)
-sp2.start_playback(uris=queue_songs)
+if __name__ == "__main__":
+    #creates the new queue, only works when the user is currently playing a song
+    random.shuffle(queue_songs)
+    sp2.start_playback(uris=queue_songs)
